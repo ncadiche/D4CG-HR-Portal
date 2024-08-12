@@ -1,0 +1,151 @@
+/*
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+*/
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.brand-bar {
+  width: 100%;
+  height: 50px;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.content-wrapper {
+  display: flex; /* Flex container for horizontal layout */
+  flex-grow: 1;
+  margin-top: 70px; /* Push content-wrapper below the brand bar */
+  height: calc(100vh - 50px); /* Fill the remaining space below the brand bar */
+  overflow: hidden;
+}
+
+.side-nav {
+  width: 200px;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  flex-shrink: 0; /* Prevents the side-nav from shrinking */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #5A5A5A;
+  color: red;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 1400px;
+}
+
+.user-panel {
+  background-color: #242526; 
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  aspect-ratio: 1 / 1; /* Makes the panels square */
+}
+
+.status-dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.status-dot.active {
+  background-color: #4cAF50;
+}
+
+.status-dot.inactive {
+  background-color: #800020;
+}
+
+.no-user-found {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.help-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.side-nav button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.side-nav button:hover {
+  background-color: #444;
+}
